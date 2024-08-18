@@ -1,24 +1,28 @@
 'use client'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import AthleteCard from './components/athleteCard'
-import SearchBar from './components/searchBar'
+import { GetAthletes } from './utils/getAthletes'
 
 export type Athlete = {
+  player_id: string
   name: string
   age: number
   imgPath: string
-}
-const zennon: Athlete = {
-  name: 'zennon',
-  age: 22,
-  imgPath:
-    'https://avatars.githubusercontent.com/u/76619871?s=400&u=4656718ac5110df371778f0e1a24e302dbe9bd4b&v=4',
+  team_name: string
 }
 
-const athletesArray: Athlete[] = Array(12).fill(zennon)
+const Home: React.FC = () => {
+  const [athletes, setAthletes] = useState<Athlete[]>([])
 
-export default function Home() {
-  const [athletes, setAthletes] = useState<Athlete[]>(athletesArray)
+  useEffect(() => {
+    const fetchData = async () => {
+      const data = await GetAthletes('zennon')
+      setAthletes(data)
+    }
+
+    fetchData()
+  }, [])
+
   return (
     <main className="flex min-h-screen w-full flex-col items-center bg-slate-600">
       <nav className="w-4/5 rounded-md flex items-center justify-center gap-2 p-2 mt-5 bg-slate-800">
@@ -38,3 +42,5 @@ export default function Home() {
     </main>
   )
 }
+
+export default Home
