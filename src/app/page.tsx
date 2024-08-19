@@ -32,7 +32,7 @@ const Home: React.FC = () => {
       <nav className="w-4/5 rounded-md  gap-2 p-2 mt-5 bg-slate-800">
         <form
           className="flex items-center justify-center gap-2"
-          onSubmit={(event) => fetchData(event)}
+          onSubmit={fetchData}
         >
           <input
             type="text"
