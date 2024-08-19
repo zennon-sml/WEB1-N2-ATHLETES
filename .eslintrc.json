@@ -2,5 +2,15 @@
   "extends": [
     "@rocketseat/eslint-config/next", 
     "next/core-web-vitals"
-  ]
+  ],
+  "rules": {
+    "@typescript-eslint/no-explicit-any": "off",
+    "prettier/prettier": [
+      "error",
+      {
+        "singleQuote": true,
+        "semi": false
+      }
+    ]
+  }
 }
