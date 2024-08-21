@@ -5,6 +5,7 @@ import { GetAthletes } from './utils/getAthletes'
 import { Skeleton } from '@/components/ui/skeleton'
 import { Dialog, DialogContent, DialogTrigger } from '@/components/ui/dialog'
 import { Star } from 'lucide-react'
+import AthleteCardStarred from './components/athleteCardStarred'
 
 export type Athlete = {
   player_id: string
@@ -51,7 +52,6 @@ const Home: React.FC = () => {
             BUSCAR
           </button>
         </form>
-
         <Dialog>
           <DialogTrigger className="bg-amber-500 flex rounded-md p-2">
             <Star />
@@ -60,7 +60,7 @@ const Home: React.FC = () => {
           <DialogContent className="min-w-max">
             <div className="flex flex-nowrap w-4/5 items-center justify-center">
               {starredAthletes.map((athlete, index) => (
-                <AthleteCard
+                <AthleteCardStarred
                   key={index}
                   athlete={athlete}
                   onFavorite={handleFavorite}

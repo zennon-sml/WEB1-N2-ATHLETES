@@ -2,14 +2,13 @@ import React from 'react'
 import { Athlete } from '../page'
 import { Button } from '@/components/ui/button'
 import { Star } from 'lucide-react'
-import { toast } from '@/components/ui/use-toast'
 
 interface AthleteProps {
   athlete: Athlete
   onFavorite: (athlete: Athlete) => void
 }
 
-export default function AthleteCard({ athlete, onFavorite }: AthleteProps) {
+export default function AthleteCardStarred({ athlete, onFavorite }: AthleteProps) {
   return (
     <div className="bg-slate-800 w-48 max-w-60 rounded-md p-2 flex flex-col items-start m-2 text-white">
       <h2>{athlete.name}</h2>
@@ -26,20 +25,6 @@ export default function AthleteCard({ athlete, onFavorite }: AthleteProps) {
           alt={athlete.name}
           className="w-40 h-40 rounded-md"
         />
-      </div>
-      <div className="flex items-center justify-center w-full">
-        <Button
-          className="m-2 hover:bg-amber-500"
-          onClick={() => {
-            toast({
-            title: "Adicionado aos favoritos",
-          })
-          onFavorite(athlete)
-          }}
-        >
-          <Star />
-          Favoritar
-        </Button>
       </div>
     </div>
   )
