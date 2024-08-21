@@ -13,9 +13,9 @@ export default function AthleteCard({ athlete, onFavorite }: AthleteProps) {
   return (
     <div className="bg-slate-800 w-48 max-w-60 rounded-md p-2 flex flex-col items-start m-2 text-white">
       <h2>{athlete.name}</h2>
-      <p>Age: {athlete.age}</p>
+      <p>Idade: {athlete.age}</p>
       <p className="whitespace-nowrap w-20 flex-nowrap">
-        Team: {athlete.team_name}
+        Time: {athlete.team_name}
       </p>
       <div className="flex items-center justify-center w-full">
         <img

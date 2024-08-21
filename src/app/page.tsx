@@ -51,7 +51,7 @@ const Home: React.FC = () => {
             onChange={(e) => setSearch(e.target.value)}
           />
           <button type="submit" className="rounded-md w-20 p-2 bg-amber-500">
-            BUSCAR
+            Buscar
           </button>
         </form>
         <Dialog>
