@@ -15,8 +15,8 @@ export type Athlete = {
   team_name: string
 }
 
-const zennon: Athlete = {name: "Zennon", age: 22, team_name: "IFCE", imgPath: "https://lh3.googleusercontent.com/pw/AP1GczO5k-KPyJF7xNfwU2X9tnx7JbQS1TNOg4Su8ZS5iDawSNFX6lYUXjJWPs7MBgWVintyyxn5BlLQSlMGU-tTYtG96evfVUbHMS8rQyphHeKA_LtEa5j085poEOwIAajP3sM5IzZ7PCXh-3wxNU4T2WkU5A=w696-h929-s-no-gm?authuser=0"}
-const junior: Athlete = {name: "Junior", age: 22, team_name: "IFCE", imgPath: "https://lh3.googleusercontent.com/pw/AP1GczOElzBVRsU5Bx8YgP-DcJlv8ndvMLpkV-6ENuXXWkkzlCnZxTRY2QCkgeLT0SfUNU9KhS90wgKNLeGV_UQcS6a5cXA-tW80VrJYM49ncVoSlS72WVvVTKfHyUeoeoE6757DrA5LPBRneIdn3DeYYjbX5A=w698-h929-s-no-gm?authuser=0"}
+const zennon: Athlete = {player_id: "4",name: "Zennon", age: 22, team_name: "IFCE", imgPath: "https://lh3.googleusercontent.com/pw/AP1GczO5k-KPyJF7xNfwU2X9tnx7JbQS1TNOg4Su8ZS5iDawSNFX6lYUXjJWPs7MBgWVintyyxn5BlLQSlMGU-tTYtG96evfVUbHMS8rQyphHeKA_LtEa5j085poEOwIAajP3sM5IzZ7PCXh-3wxNU4T2WkU5A=w696-h929-s-no-gm?authuser=0"}
+const junior: Athlete = {player_id: "7",name: "Junior", age: 22, team_name: "IFCE", imgPath: "https://lh3.googleusercontent.com/pw/AP1GczOElzBVRsU5Bx8YgP-DcJlv8ndvMLpkV-6ENuXXWkkzlCnZxTRY2QCkgeLT0SfUNU9KhS90wgKNLeGV_UQcS6a5cXA-tW80VrJYM49ncVoSlS72WVvVTKfHyUeoeoE6757DrA5LPBRneIdn3DeYYjbX5A=w698-h929-s-no-gm?authuser=0"}
 const Home: React.FC = () => {
   const [athletes, setAthletes] = useState<Athlete[]>([zennon, junior])
   const [starredAthletes, setStarredAthletes] = useState<Athlete[]>([])
